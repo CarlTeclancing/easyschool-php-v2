@@ -1,4 +1,9 @@
 <?php
+session_start();
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 ob_start();
 // require('../../header.php');
 require('../../inc/db.config.php');
@@ -29,8 +34,9 @@ if(isset($_POST['submit'])){
         $end_time = $_POST['end_time'];
         $class_id = $_POST['class'];
 
-        $id = $_SESSION['id'];
+        $id = $_POST['teacher_id'];
         $role_id= $_SESSION['role_id'];
+        
 
         // $sql = "SELECT * FROM admins WHERE id = $id";
         // $result = mysqli_query($conn, $sql);
@@ -51,24 +57,29 @@ if(isset($_POST['submit'])){
         //Update the entry in the database
 
            
-            $stmt = $conn->prepare("INSERT INTO live_classes (`title`, desc, url, live_class_method_id, start_time, end_time, class_id, creator_id, role_id) VALUES (?,?,?,?,?,?,?,?,?)");
-            // $stmt->bind_param("sssissiii", $title, $desc, $url, $class_method, $start_time, $end_time, $class_id, $id, $role_id);
+            // $stmt = $conn->prepare("INSERT INTO live_classes (`title`, `desc`, `url`, live_class_method_id, start_time, end_time, class_id, creator_id, role_id) VALUES (?,?,?,?,?,?,?,?,?)");
+            // // $stmt->bind_param("sssissiii", $title, $desc, $url, $class_method, $start_time, $end_time, $class_id, $id, $role_id);
 
-            $stmt->bind_param("sssissiii", $_POST['title'], $_POST['desc'], $_POST['url'], $_POST['class_method'],  $_POST['start_time'], $_POST['end_time'], $_POST['class'], $id, $user_role);
+            // $stmt->bind_param("sssissiii", $_POST['title'], $_POST['desc'], $_POST['url'], $_POST['class_method'],  $_POST['start_time'], $_POST['end_time'], $_POST['class'], $id, $role_id);
 
-            $stmt->execute();
+            // $stmt->execute();
 
 
+            $stmt = $conn->prepare("INSERT INTO live_classes (`title`, `desc`, `url`, `live_class_method_id`, `start_time`, `end_time`, `class_id`, `creator_id`, `role_id`) VALUES (?,?,?,?,?,?,?,?,?)");
+            $stmt->bind_param("sssissiii", $_POST['title'], $_POST['desc'], $_POST['url'], $_POST['class_method'], $_POST['start_time'], $_POST['end_time'], $_POST['class'], $_POST['teacher_id'], $_SESSION['role_id']);
+            
 
 
     
         
-            if (mysqli_stmt_affected_rows($stmt) > 0) {
+            if ($stmt->execute()) {
+                var_dump($stmt->error);
                 // Update successful
                 echo "created successful!";
             } else {
+                var_dump($stmt->error);
                 // Update failed
-                echo "Action failed!";
+                echo "Action failed! succesfully";
             }
         
        
@@ -131,6 +142,24 @@ if(isset($_POST['submit'])){
                         <select name="class" id="">
 
                             <?php $query = "SELECT * FROM classes"; 
+                                $result = mysqli_query($conn, $query);
+                            ?>
+                            <?php if (mysqli_num_rows($result) > 0) : ?>
+
+                                <?php foreach ($result as $data) : ?>
+                                    <option value="<?= $data['id'] ?>"><?= $data['name'] ?></option>
+                                <?php endforeach ?>
+
+                            <?php endif ?>
+
+                        </select>
+                    </div>
+
+                    <div class="form-elements">
+                        <label for="class" class="form-label mt-5">Chose Teacher</label>
+                        <select name="teacher_id" id="">
+
+                            <?php $query = "SELECT * FROM teachers"; 
                                 $result = mysqli_query($conn, $query);
                             ?>
                             <?php if (mysqli_num_rows($result) > 0) : ?>
