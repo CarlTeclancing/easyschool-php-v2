@@ -11,7 +11,7 @@
 ?>
 			<main class="content">
             <div class="row mb-2 mb-xl-3">
-						<div class="col-auto d-none d-sm-block">
+						<div class="col-auto   d-sm-block">
 							<h3><strong>Teachers</strong> Dashboard</h3>
 						</div>
 
@@ -36,10 +36,10 @@
                         <div class="card-header">
                             <table class="table table-hover my-0">
                                 <tr>
-                                    <th class="d-none d-xl-table-cell">Teacher name</th>
-                                    <th class="d-none d-xl-table-cell">Teacher Email</th>
-                                    <th class="d-none d-xl-table-cell">Teacher Class</th>
-                                    <th class="d-none d-xl-table-cell">Action</th>
+                                    <th class="  d-xl-table-cell">Teacher name</th>
+                                    <th class="  d-xl-table-cell">Teacher Email</th>
+                                    <th class="  d-xl-table-cell">Teacher Class</th>
+                                    <th class="  d-xl-table-cell">Action</th>
                                 </tr>
 
 
@@ -48,8 +48,8 @@
                                     <?php foreach($result as $data): ?>
 
                                     <tr>
-                                        <td class="d-none d-xl-table-cell"><?= $data['name']?></td>
-                                        <td class="d-none d-xl-table-cell"><?= $data['email']?></td>
+                                        <td class="  d-xl-table-cell"><?= $data['name']?></td>
+                                        <td class="  d-xl-table-cell"><?= $data['email']?></td>
                                         <?php
                                             $class_id = $data['class_id'];
                                             $sql = "SELECT * FROM classes WHERE id=$class_id";
@@ -58,9 +58,9 @@
                                             foreach($result as $class)
 
                                         ?>
-                                        <td class="d-none d-xl-table-cell"><?= $class['name']?></td>
-                                        <td class="d-none d-xl-table-cell"><a href="<?=ADMINURL.'/actions/teacher/edit.php?id='.$data['id']?>" class='btn btn-primary'>Edit</a></td>
-                                        <td class="d-none d-xl-table-cell"><a href="<?=ADMINURL.'/actions/teacher/delete.php?id='.$data['id']?>" class='btn btn-danger'>Suspend</a></td>
+                                        <td class="  d-xl-table-cell"><?= $class['name']?></td>
+                                        <td class="  d-xl-table-cell"><a href="<?=ADMINURL.'/actions/teacher/edit.php?id='.$data['id']?>" class='btn btn-primary'>Edit</a></td>
+                                        <td class="  d-xl-table-cell"><a href="<?=ADMINURL.'/actions/teacher/delete.php?id='.$data['id']?>" class='btn btn-danger'>Suspend</a></td>
                                     </tr>
 
                                     <?php endforeach ?>

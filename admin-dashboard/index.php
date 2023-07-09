@@ -8,7 +8,7 @@
 				<div class="container-fluid p-0">
 
 					<div class="row mb-2 mb-xl-3">
-						<div class="col-auto d-none d-sm-block">
+						<div class="col-auto   d-sm-block">
 							<h3><strong>Analytics</strong> Dashboard</h3>
 						</div>
 
@@ -154,68 +154,68 @@
 									<thead>
 										<tr>
 											<th>Name</th>
-											<th class="d-none d-xl-table-cell">Start Date</th>
-											<th class="d-none d-xl-table-cell">End Date</th>
+											<th class="  d-xl-table-cell">Start Date</th>
+											<th class="  d-xl-table-cell">End Date</th>
 											<th>Status</th>
-											<th class="d-none d-md-table-cell">Assignee</th>
+											<th class="  d-md-table-cell">Assignee</th>
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
 											<td>Project Apollo</td>
-											<td class="d-none d-xl-table-cell">01/01/2020</td>
-											<td class="d-none d-xl-table-cell">31/06/2020</td>
+											<td class="  d-xl-table-cell">01/01/2020</td>
+											<td class="  d-xl-table-cell">31/06/2020</td>
 											<td><span class="badge bg-success">Done</span></td>
-											<td class="d-none d-md-table-cell">Vanessa Tucker</td>
+											<td class="  d-md-table-cell">Vanessa Tucker</td>
 										</tr>
 										<tr>
 											<td>Project Fireball</td>
-											<td class="d-none d-xl-table-cell">01/01/2020</td>
-											<td class="d-none d-xl-table-cell">31/06/2020</td>
+											<td class="  d-xl-table-cell">01/01/2020</td>
+											<td class="  d-xl-table-cell">31/06/2020</td>
 											<td><span class="badge bg-danger">Cancelled</span></td>
-											<td class="d-none d-md-table-cell">William Harris</td>
+											<td class="  d-md-table-cell">William Harris</td>
 										</tr>
 										<tr>
 											<td>Project Hades</td>
-											<td class="d-none d-xl-table-cell">01/01/2020</td>
-											<td class="d-none d-xl-table-cell">31/06/2020</td>
+											<td class="  d-xl-table-cell">01/01/2020</td>
+											<td class="  d-xl-table-cell">31/06/2020</td>
 											<td><span class="badge bg-success">Done</span></td>
-											<td class="d-none d-md-table-cell">Sharon Lessman</td>
+											<td class="  d-md-table-cell">Sharon Lessman</td>
 										</tr>
 										<tr>
 											<td>Project Nitro</td>
-											<td class="d-none d-xl-table-cell">01/01/2020</td>
-											<td class="d-none d-xl-table-cell">31/06/2020</td>
+											<td class="  d-xl-table-cell">01/01/2020</td>
+											<td class="  d-xl-table-cell">31/06/2020</td>
 											<td><span class="badge bg-warning">In progress</span></td>
-											<td class="d-none d-md-table-cell">Vanessa Tucker</td>
+											<td class="  d-md-table-cell">Vanessa Tucker</td>
 										</tr>
 										<tr>
 											<td>Project Phoenix</td>
-											<td class="d-none d-xl-table-cell">01/01/2020</td>
-											<td class="d-none d-xl-table-cell">31/06/2020</td>
+											<td class="  d-xl-table-cell">01/01/2020</td>
+											<td class="  d-xl-table-cell">31/06/2020</td>
 											<td><span class="badge bg-success">Done</span></td>
-											<td class="d-none d-md-table-cell">William Harris</td>
+											<td class="  d-md-table-cell">William Harris</td>
 										</tr>
 										<tr>
 											<td>Project X</td>
-											<td class="d-none d-xl-table-cell">01/01/2020</td>
-											<td class="d-none d-xl-table-cell">31/06/2020</td>
+											<td class="  d-xl-table-cell">01/01/2020</td>
+											<td class="  d-xl-table-cell">31/06/2020</td>
 											<td><span class="badge bg-success">Done</span></td>
-											<td class="d-none d-md-table-cell">Sharon Lessman</td>
+											<td class="  d-md-table-cell">Sharon Lessman</td>
 										</tr>
 										<tr>
 											<td>Project Romeo</td>
-											<td class="d-none d-xl-table-cell">01/01/2020</td>
-											<td class="d-none d-xl-table-cell">31/06/2020</td>
+											<td class="  d-xl-table-cell">01/01/2020</td>
+											<td class="  d-xl-table-cell">31/06/2020</td>
 											<td><span class="badge bg-success">Done</span></td>
-											<td class="d-none d-md-table-cell">Christina Mason</td>
+											<td class="  d-md-table-cell">Christina Mason</td>
 										</tr>
 										<tr>
 											<td>Project Wombat</td>
-											<td class="d-none d-xl-table-cell">01/01/2020</td>
-											<td class="d-none d-xl-table-cell">31/06/2020</td>
+											<td class="  d-xl-table-cell">01/01/2020</td>
+											<td class="  d-xl-table-cell">31/06/2020</td>
 											<td><span class="badge bg-warning">In progress</span></td>
-											<td class="d-none d-md-table-cell">William Harris</td>
+											<td class="  d-md-table-cell">William Harris</td>
 										</tr>
 									</tbody>
 								</table>

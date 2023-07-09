@@ -14,7 +14,7 @@ $result = mysqli_query($conn, $sql);
 
 <main class="content">
 <div class="row mb-2 mb-xl-3">
-						<div class="col-auto d-none d-sm-block">
+						<div class="col-auto   d-sm-block">
 							<h3><strong>Attendance</strong> Student Attendance</h3>
 						</div>
 
@@ -23,11 +23,11 @@ $result = mysqli_query($conn, $sql);
                         <div class="card-header">
                             <table class="table table-hover my-0">
                                 <tr>
-                                    <th class="d-none d-xl-table-cell">Student name</th>
-                                    <th class="d-none d-xl-table-cell">Class</th>
-                                    <th class="d-none d-xl-table-cell">Teacher</th>
-                                    <th class="d-none d-xl-table-cell">Date</th>
-                                    <th class='d-none d-xl-table-cell'>Attendance Status</th>
+                                    <th class="  d-xl-table-cell">Student name</th>
+                                    <th class="  d-xl-table-cell">Class</th>
+                                    <th class="  d-xl-table-cell">Teacher</th>
+                                    <th class="  d-xl-table-cell">Date</th>
+                                    <th class='  d-xl-table-cell'>Attendance Status</th>
                                 </tr>
 
 
@@ -45,7 +45,7 @@ $result = mysqli_query($conn, $sql);
                                         ?>
 
                                     <tr>
-                                        <td class="d-none d-xl-table-cell"><?= $students['name']?></td>
+                                        <td class="  d-xl-table-cell"><?= $students['name']?></td>
                                         
                                         <?php
                                             $class_id = $data['class_id'];
@@ -55,7 +55,7 @@ $result = mysqli_query($conn, $sql);
                                             foreach($result as $class)
 
                                         ?>
-                                        <td class="d-none d-xl-table-cell"><?= $class['name']?></td>
+                                        <td class="  d-xl-table-cell"><?= $class['name']?></td>
 
                                         <?php
                                             $teacher_id = $data['teacher_id'];
@@ -65,19 +65,19 @@ $result = mysqli_query($conn, $sql);
                                             foreach($result as $teacher)
 
                                         ?>
-                                        <td class="d-none d-xl-table-cell"><?= $teacher['name']?></td>
+                                        <td class="  d-xl-table-cell"><?= $teacher['name']?></td>
 
-                                        <td class="d-none d-xl-table-cell"><?= $data['date']?></td>
+                                        <td class="  d-xl-table-cell"><?= $data['date']?></td>
 
                                         <?php if($data['status'] = 0): ?>
 
-                                            <td class="d-none d-xl-table-cell"><span>Absent</span></td>
+                                            <td class="  d-xl-table-cell"><span>Absent</span></td>
 
                                             <?php endif ?>
 
                                             <?php if($data['status'] = 1): ?>
 
-                                                <td class="d-none d-xl-table-cell"><span>Present</span></td>
+                                                <td class="  d-xl-table-cell"><span>Present</span></td>
 
                                                 
 

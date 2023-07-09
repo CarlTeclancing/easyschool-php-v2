@@ -12,7 +12,7 @@
 ?>
 			<main class="content">
             <div class="row mb-2 mb-xl-3">
-						<div class="col-auto d-none d-sm-block">
+						<div class="col-auto   d-sm-block">
 							<h3><strong>Complains</strong> Dashboard</h3>
 						</div>
 

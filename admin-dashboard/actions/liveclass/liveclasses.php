@@ -13,7 +13,7 @@
 			<main class="content">
 
             <div class="row mb-2 mb-xl-3">
-						<div class="col-auto d-none d-sm-block">
+						<div class="col-auto   d-sm-block">
 							<h3><strong>Classes</strong> Dashboard</h3>
 						</div>
 
@@ -32,14 +32,14 @@
                         <div class="card-header">
                             <table class="table table-hover my-0">
                                 <tr>
-                                    <th class="d-none d-xl-table-cell">class Title</th>
-                                    <th class="d-none d-xl-table-cell">class Description</th>
-                                    <th class="d-none d-xl-table-cell">Class method</th>
-                                    <th class="d-none d-xl-table-cell">Start Time</th>
-                                    <th class="d-none d-xl-table-cell">End Time</th>
-                                    <th class="d-none d-xl-table-cell">class</th>
-                                    <th class="d-none d-xl-table-cell">Teacher</th>
-                                    <th class="d-none d-xl-table-cell">Action</th>
+                                    <th class=" d-xl-table-cell">class Title</th>
+                                    <th class=" d-xl-table-cell">class Description</th>
+                                    <th class=" d-xl-table-cell">Class method</th>
+                                    <th class=" d-xl-table-cell">Start Time</th>
+                                    <th class=" d-xl-table-cell">End Time</th>
+                                    <th class=" d-xl-table-cell">class</th>
+                                    <th class=" d-xl-table-cell">Teacher</th>
+                                    <th class=" d-xl-table-cell">Action</th>
 
                                 </tr>
 
@@ -49,8 +49,8 @@
                                     <?php foreach($result as $data): ?>
 
                                     <tr>
-                                        <td class="d-none d-xl-table-cell"><?= $data['title']?></td>
-                                        <td class="d-none d-xl-table-cell"><?= $data['desc']?></td>
+                                        <td class=" d-xl-table-cell"><?= $data['title']?></td>
+                                        <td class=" d-xl-table-cell"><?= $data['desc']?></td>
                                         <?php 
                                             $m_id =$data['live_class_method_id'];
                                             $query = "SELECT * FROM live_class_methods WHERE id=$m_id" ; 
@@ -59,12 +59,12 @@
                                         <?php if(mysqli_num_rows($result) > 0): ?>
 
                                             <?php foreach ($result as $class_method) : ?>
-                                                <td class="d-none d-xl-table-cell"><?= $class_method['name']?></td>
+                                                <td class=" d-xl-table-cell"><?= $class_method['name']?></td>
                                             <?php endforeach ?>
 
                                         <?php endif ?>
-                                        <td class="d-none d-xl-table-cell"><?= $data['start_time']?></td>
-                                        <td class="d-none d-xl-table-cell"><?= $data['end_time']?></td>
+                                        <td class=" d-xl-table-cell"><?= $data['start_time']?></td>
+                                        <td class=" d-xl-table-cell"><?= $data['end_time']?></td>
                                         <?php
                                             $id = $data['class_id'];
                                             $query = "SELECT * FROM classes WHERE id=$id" ; 
@@ -75,7 +75,7 @@
                                         
                                        
                                             <?php foreach ($result as $class) : ?>
-                                                <td class="d-none d-xl-table-cell"><?= $class['name']?></td>
+                                                <td class=" d-xl-table-cell"><?= $class['name']?></td>
                                             <?php endforeach ?>
 
                                         <?php endif ?>
@@ -91,11 +91,11 @@
                                         
                                         
                                             <?php foreach ($result as $teachers) : ?>
-                                                <td class="d-none d-xl-table-cell"><?= $teachers['name']?></td>
+                                                <td class=" d-xl-table-cell"><?= $teachers['name']?></td>
                                             <?php endforeach ?>
 
                                         <?php endif ?>
-                                        <td class="d-none d-xl-table-cell"><a href="<?= $data['url']?>" target="_blank" class="btn btn-outline-primary" >Join Class</a></td>
+                                        <td class=" d-xl-table-cell"><a href="<?= $data['url']?>" target="_blank" class="btn btn-outline-primary" >Join Class</a></td>
                                         
                                         
 

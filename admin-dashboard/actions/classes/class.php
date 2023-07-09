@@ -13,7 +13,7 @@
 			<main class="content">
 
             <div class="row mb-2 mb-xl-3">
-						<div class="col-auto d-none d-sm-block">
+						<div class="col-auto   d-sm-block">
 							<h3><strong>Classes</strong> Dashboard</h3>
 						</div>
 
@@ -32,9 +32,9 @@
                         <div class="card-header">
                             <table class="table table-hover my-0">
                                 <tr>
-                                    <th class="d-none d-xl-table-cell">class name</th>
-                                    <th class="d-none d-xl-table-cell">class Description</th>
-                                    <th class="d-none d-xl-table-cell">Action</th>
+                                    <th class="  d-xl-table-cell">class name</th>
+                                    <th class="  d-xl-table-cell">class Description</th>
+                                    <th class="  d-xl-table-cell">Action</th>
                                 </tr>
 
 
@@ -43,10 +43,10 @@
                                     <?php foreach($result as $data): ?>
 
                                     <tr>
-                                        <td class="d-none d-xl-table-cell"><?= $data['name']?></td>
-                                        <td class="d-none d-xl-table-cell"><?= $data['desc']?></td>
-                                        <td class="d-none d-xl-table-cell"><a href="<?=ADMINURL.'/actions/classes/edit.php?id='.$data['id']?>" class='btn btn-primary'>Edit</a></td>
-                                        <td class="d-none d-xl-table-cell"><a href="<?=ADMINURL.'/actions/classes/delete.php?id='.$data['id']?>" class='btn btn-danger'>Delete</a></td>
+                                        <td class="  d-xl-table-cell"><?= $data['name']?></td>
+                                        <td class="  d-xl-table-cell"><?= $data['desc']?></td>
+                                        <td class="  d-xl-table-cell"><a href="<?=ADMINURL.'/actions/classes/edit.php?id='.$data['id']?>" class='btn btn-primary'>Edit</a></td>
+                                        <td class="  d-xl-table-cell"><a href="<?=ADMINURL.'/actions/classes/delete.php?id='.$data['id']?>" class='btn btn-danger'>Delete</a></td>
                                     </tr>
 
                                     <?php endforeach ?>

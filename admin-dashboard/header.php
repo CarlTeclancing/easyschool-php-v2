@@ -158,7 +158,7 @@
 					<i class="hamburger align-self-center"></i>
 				</a>
 
-				<form class="d-none d-sm-inline-block">
+				<form class="  d-sm-inline-block">
 					<div class="input-group input-group-navbar">
 						<input type="text" class="form-control" placeholder="Search…" aria-label="Search">
 						<button class="btn" type="button">
@@ -167,13 +167,13 @@
 					</div>
 				</form>
 
-				<div class="navbar-collapse collapse">
+				<div class=" navbar-collapse collapse">
 					<ul class="navbar-nav navbar-align">
 						<li class="nav-item dropdown">
 							<a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-toggle="dropdown">
 								<div class="position-relative">
-									<i class="align-middle" data-feather="bell"></i>
-									<span class="indicator">4</span>
+									<i class="align-middle d-none" data-feather="bell"></i>
+									<span class="d-none indicator">4</span>
 								</div>
 							</a>
 							<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right py-0"
@@ -238,10 +238,10 @@
 								</div>
 							</div>
 						</li>
-						<li class="nav-item dropdown">
+						<li class=" nav-item dropdown">
 							<a class="nav-icon dropdown-toggle" href="#" id="messagesDropdown" data-toggle="dropdown">
 								<div class="position-relative">
-									<i class="align-middle" data-feather="message-square"></i>
+									<i class="d-none align-middle" data-feather="message-square"></i>
 								</div>
 							</a>
 							<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right py-0"
@@ -255,7 +255,7 @@
 									<a href="#" class="list-group-item">
 										<div class="row g-0 align-items-center">
 											<div class="col-2">
-												<img src="img/avatars/avatar-5.jpg"
+												<img src="<?=ADMINURL .'/img/avatars/avatar-5.jpg'?>"
 													class="avatar img-fluid rounded-circle" alt="Vanessa Tucker">
 											</div>
 											<div class="col-10 pl-2">
@@ -317,15 +317,16 @@
 						<li class="nav-item dropdown">
 							<a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#"
 								data-toggle="dropdown">
-								<i class="align-middle" data-feather="settings"></i>
+								<i class="d-none align-middle" data-feather="settings"></i>
 							</a>
 
-							<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#"
+							<a class="nav-link dropdown-toggle   d-sm-inline-block" href="#"
 								data-toggle="dropdown">
-								<img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded mr-1"
-									alt="Charles Hall" /> <span class="text-dark"><?= $_SESSION['name']?></span>
+								<img src="<?=ADMINURL.'/img/avatars/avatar.jpg'?>" class="avatar img-fluid rounded mr-1"
+									alt="Charles Hall" /> <span class="text-dark"></span>
 							</a>
 							<div class="dropdown-menu dropdown-menu-right">
+								<span class="dropdown-item align-middle mr-1"><?= $_SESSION['name']?></span>
 								<a class="dropdown-item" href="#"><i class="align-middle mr-1"
 										data-feather="user"></i> Profile</a>
 								<div class="dropdown-divider"></div>
