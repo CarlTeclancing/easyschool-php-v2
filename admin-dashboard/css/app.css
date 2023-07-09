@@ -1,8 +1,18 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 .bi{
-    font-size: 20px;
+    font-size: 24px;
     text-align: center;
 }
+@media (max-width: 767px) {
+    main.content {
+      display: block !important; /* Ensure main display is visible */
+    }
+    
+    table {
+      display: table !important; /* Ensure table is visible */
+    }
+  }
+  
 /*!
  * AdminKit v2.0.1 (https://adminkit.io/)
  * Copyright 2020 Paul Laros

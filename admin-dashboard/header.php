@@ -135,7 +135,7 @@
 						<ul id="live" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
 							<li class="sidebar-item"><a class="sidebar-link" href="<?=ADMINURL . '/actions/liveclass/addliveclass.php'?>">Add Live Class</a>
 							</li>
-							<li class="sidebar-item"><a class="sidebar-link" href="#">All Live Class</a>
+							<li class="sidebar-item"><a class="sidebar-link" href="<?=ADMINURL . '/actions/liveclass/liveclasses.php'?>">All Live Class</a>
 							</li>
 						</ul>
 					</li>
