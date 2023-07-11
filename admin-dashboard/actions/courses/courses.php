@@ -28,7 +28,7 @@
 					</div>
 				<div class="container-fluid p-0">
                 <div class="card flex-fill">
-                        <div class="card-header">
+                        <div class="card-header table-responsive">
                             <table class="table table-hover my-0">
                                 <tr>
                                     <th class="  d-xl-table-cell">course name</th>

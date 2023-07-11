@@ -241,7 +241,7 @@
 						<li class=" nav-item dropdown">
 							<a class="nav-icon dropdown-toggle" href="#" id="messagesDropdown" data-toggle="dropdown">
 								<div class="position-relative">
-									<i class="d-none align-middle" data-feather="message-square"></i>
+									<i class="d-none d-md-block align-middle" data-feather="message-square"></i>
 								</div>
 							</a>
 							<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right py-0"
@@ -317,7 +317,7 @@
 						<li class="nav-item dropdown">
 							<a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#"
 								data-toggle="dropdown">
-								<i class="d-none align-middle" data-feather="settings"></i>
+								<i class="d-none d-md-block align-middle" data-feather="settings"></i>
 							</a>
 
 							<a class="nav-link dropdown-toggle   d-sm-inline-block" href="#"
