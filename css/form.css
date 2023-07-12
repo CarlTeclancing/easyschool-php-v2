@@ -3,7 +3,7 @@
     --text: #FFFFFE;
     --main: #031B29;
     --background: #003554;
-    --acent:#FF1477.
+    --acent:#FF1477;
 }
 body{
     width: 100%;
@@ -12,6 +12,8 @@ body{
     align-items: center;
     justify-content: center;
     background-color: var(--background);
+    overflow: hidden;
+    font-family: var(--bs-font-sans-serif);
 }
 .card{
     border-radius: 12px;
@@ -46,4 +48,95 @@ input{
     width: 50%;
     height: 100%;
     background-color: #031B29;
+}
+
+.container-main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background);
+}
+form{
+    width: 80%;
+    height: auto;
+}
+.row-1{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.row-2{
+    width: 50%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--main);
+    border-radius: 68px;
+}
+.form-el{
+    width: 100%;
+    display: flex;
+
+    flex-direction: column;
+}
+.input{
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    background-color: white;
+}
+.icon{
+    width: 10%;
+    height: 100%;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input{
+    width: 90%;
+    border: none;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-size: 14px;
+}
+label{
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 12px;
+    color: white;
+}
+.link{
+    color: var(--acent);
+    text-align: center;
+    font-size: 12px;
+    margin-top: 12px;
+}
+.btn-p{
+    width: 100%;
+    background-color: var(--primary);
+    height: 58px;
+    color: white;
+    font-size: 14px;
+    margin-top: 58px;
+}
+.img-hold{
+    width: 80%;
+    height: auto;
+}
+.admin-dash{
+    width: 100%;
+    border-radius: 12px;
 }

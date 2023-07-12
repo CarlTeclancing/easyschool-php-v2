@@ -24,12 +24,6 @@
 								</ol>
 							</nav>
 						</div>
-
-                        <div class="col-auto ml-auto text-right mt-n1">
-							<a href="<?=ADMINURL. "/actions/users/allusers.php"?>" class="btn btn-outline-primary">All Users</a>
-                            <a href="<?=ADMINURL. "/actions/users/students.php"?>" class="btn btn-outline-primary">Students</a>
-                            <a href="<?=ADMINURL. "/actions/users/teachers.php"?>" class="btn btn-primary">Teachers</a>
-						</div>
 					</div>
 				<div class="container-fluid p-0">
                     <div class="card flex-fill">
@@ -60,7 +54,7 @@
                                         ?>
                                         <td class="  d-xl-table-cell"><?= $class['name']?></td>
                                         <td class="  d-xl-table-cell"><a href="<?=ADMINURL.'/actions/teacher/edit.php?id='.$data['id']?>" class='btn btn-primary'>Edit</a></td>
-                                        <td class="  d-xl-table-cell"><a href="<?=ADMINURL.'/actions/teacher/delete.php?id='.$data['id']?>" class='btn btn-danger'>Suspend</a></td>
+                                        <td class="  d-xl-table-cell"><a href="<?=ADMINURL.'/actions/teacher/delete.php?id='.$data['id']?>" class='btn btn-danger'>Delete</a></td>
                                     </tr>
 
                                     <?php endforeach ?>

@@ -4,42 +4,38 @@
     require('../../inc/db.config.php');	
 
 
-    $query = "SELECT * FROM teachers";
 
-    $result = mysqli_query($conn, $query);
+    $id = $_GET['id'];
 
+    $sql = "SELECT * FROM students WHERE class_id=$id";
+    $result = mysqli_query($conn, $sql);
 ?>
-			<main class="content">
+
+<main class="content">
             <div class="row mb-2 mb-xl-3">
 						<div class="col-auto   d-sm-block">
-							<h3><strong>Teachers</strong> Dashboard</h3>
+							<h3><strong>Student</strong> Dashboard</h3>
 						</div>
 
 						<div class="col-auto ml-auto text-right mt-n1">
 							<nav aria-label="breadcrumb">
 								<ol class="breadcrumb bg-transparent p-0 mt-1 mb-0">
 									<li class="breadcrumb-item"><a href="<?=ADMINURL?>">EazySchool</a></li>
-									<li class="breadcrumb-item"><a href="#">Teachers</a></li>
-									<li class="breadcrumb-item active" aria-current="page">All Teachers</li>
+									<li class="breadcrumb-item"><a href="#">Students</a></li>
+									<li class="breadcrumb-item active" aria-current="page">All Students</li>
 								</ol>
 							</nav>
-						</div>
-
-                        <div class="col-auto ml-auto text-right mt-n1">
-							<a href="<?=ADMINURL. "/actions/users/allusers.php"?>" class="btn btn-outline-primary">All Users</a>
-                            <a href="<?=ADMINURL. "/actions/users/students.php"?>" class="btn btn-outline-primary">Students</a>
-                            <a href="<?=ADMINURL. "/actions/users/teachers.php"?>" class="btn btn-primary">Teachers</a>
 						</div>
 					</div>
 				<div class="container-fluid p-0">
                     <div class="card flex-fill">
-                        <div class="card-header table-responsive">
+                        <div class="card-header">
                             <table class="table table-hover my-0">
                                 <tr>
-                                    <th class="  d-xl-table-cell">Teacher name</th>
-                                    <th class="  d-xl-table-cell">Teacher Email</th>
-                                    <th class="  d-xl-table-cell">Teacher Class</th>
-                                    <th class="  d-xl-table-cell">Action</th>
+                                    <th class="  d-xl-table-cell">Student name</th>
+                                    <th class="  d-xl-table-cell">Student Email</th>
+                                    <th class="  d-xl-table-cell">Student Class</th>
+                                    <th class="  d-xl-table-cell">Attendance</th>
                                 </tr>
 
 
@@ -59,8 +55,7 @@
 
                                         ?>
                                         <td class="  d-xl-table-cell"><?= $class['name']?></td>
-                                        <td class="  d-xl-table-cell"><a href="<?=ADMINURL.'/actions/teacher/edit.php?id='.$data['id']?>" class='btn btn-primary'>Edit</a></td>
-                                        <td class="  d-xl-table-cell"><a href="<?=ADMINURL.'/actions/teacher/delete.php?id='.$data['id']?>" class='btn btn-danger'>Suspend</a></td>
+                                        <td class="  d-xl-table-cell"><a href="<?= ADMINURL.'/actions/attendance/attendance.php?id=' . $data['id']?>" class='btn btn-primary'>View Attendance</a></td>
                                     </tr>
 
                                     <?php endforeach ?>
@@ -73,6 +68,8 @@
                     </div>
                 </div>
             </main>
+
+
 <?php
 
     require('../../footer.php');
