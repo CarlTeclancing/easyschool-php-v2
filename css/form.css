@@ -118,6 +118,11 @@ label{
     margin-bottom: 12px;
     color: white;
 }
+select{
+    height: 48px;
+    border-radius: 12px;
+    outline: none;
+}
 .link{
     color: var(--acent);
     text-align: center;
@@ -131,6 +136,8 @@ label{
     color: white;
     font-size: 14px;
     margin-top: 58px;
+    border: none;
+    border-radius: 12px;
 }
 .img-hold{
     width: 80%;

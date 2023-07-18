@@ -1,5 +1,5 @@
 <?php
-	require(__DIR__ . '/../admin-dashboard/header.php');
+	require(__DIR__ . '/../student/header.php');
 	require('./inc/db.config.php');	
 	
 ?>

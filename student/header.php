@@ -22,7 +22,7 @@
 
 	<title>EasySchool</title>
 
-	<link href="<?=ADMINURL."/css/app.css" ?>" rel="stylesheet">
+	<link href="<?=STUDENTURL."/css/app.css" ?>" rel="stylesheet">
 	
 </head>
 
@@ -30,7 +30,7 @@
 	<div class="wrapper">
 		<nav id="sidebar" class="sidebar">
 			<div class="sidebar-content js-simplebar">
-				<a class="sidebar-brand" href="<?=ADMINURL?>">
+				<a class="sidebar-brand" href="<?=STUDENTURL?>">
 					<span class="align-middle">EasySchool</span>
 				</a>
 
@@ -40,21 +40,10 @@
 					</li>
 
 					<li class="sidebar-item active">
-						<a class="sidebar-link" href="<?=ADMINURL?>">
+						<a class="sidebar-link" href="<?=STUDENTURL?>">
 							<i class="align-middle" data-feather="sliders"></i> <span
 								class="align-middle">Dashboard</span>
 						</a>
-					</li>
-
-					<li class="sidebar-item">
-						<a data-target="#ui" data-toggle="collapse" class="sidebar-link collapsed"
-							href="#">
-							<i class="bi bi-journal-medical"></i> <span class="align-middle">Classes</span>
-						</a>
-						<ul id="ui" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-							<li class="sidebar-item"><a class="sidebar-link" href="<?=ADMINURL. "./actions/classes/add_class.php"?>">Add Class</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="<?=ADMINURL. "./actions/classes/class.php"?>">All Classes</a></li>
-						</ul>
 					</li>
 
 					<li class="sidebar-item">
@@ -63,20 +52,7 @@
 							<i class="bi bi-mortarboard"></i> <span class="align-middle">Courses</span>
 						</a>
 						<ul id="courses" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-							<li class="sidebar-item"><a class="sidebar-link" href="<?= ADMINURL. "/actions/courses/add_courses.php"?>">Add Course</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="<?= ADMINURL. "/actions/courses/courses.php"?>">All Courses</a></li>
-						</ul>
-					</li>
-
-					<li class="sidebar-item">
-						<a data-target="#teachers" data-toggle="collapse" class="sidebar-link collapsed"
-							href="#">
-							<i class="bi bi-people-fill"></i> <span class="align-middle">Teachers</span>
-						</a>
-						<ul id="teachers" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-							<li class="sidebar-item"><a class="sidebar-link" href="<?= ADMINURL. "/actions/teacher/add_teacher.php"?>">Add Teacher</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="<?= ADMINURL. "/actions/teacher/teachers.php"?>">All Teachers</a>
-							</li>
+							<li class="sidebar-item"><a class="sidebar-link" href="<?= STUDENTURL. "/actions/courses/courses.php"?>">All Courses</a></li>
 						</ul>
 					</li>
 
@@ -86,21 +62,7 @@
 							<i class="bi bi-people"></i> <span class="align-middle">Students</span>
 						</a>
 						<ul id="student" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-							<li class="sidebar-item"><a class="sidebar-link" href="<?= ADMINURL. "/actions/student/add_student.php"?>">Add Student</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="<?= ADMINURL. "/actions/student/student.php"?>">All Students</a>
-							</li>
-						</ul>
-					</li>
-
-					<li class="sidebar-item">
-						<a data-target="#acount" data-toggle="collapse" class="sidebar-link collapsed"
-							href="#">
-							<i class="bi bi-person-check"></i> <span class="align-middle">User Account</span>
-						</a>
-						<ul id="acount" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-							<li class="sidebar-item"><a class="sidebar-link" href="<?= ADMINURL. "/actions/users/add_user.php"?>">Add User Account</a>
-							</li>
-							<li class="sidebar-item"><a class="sidebar-link" href="<?= ADMINURL. "/actions/users/allusers.php"?>">All User Account</a>
+							<li class="sidebar-item"><a class="sidebar-link" href="<?= STUDENTURL. "/actions/student/student.php"?>">All Students</a>
 							</li>
 						</ul>
 					</li>
@@ -111,7 +73,7 @@
 							<i class="bi bi-card-heading"></i> <span class="align-middle">Complains</span>
 						</a>
 						<ul id="complain" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-							<li class="sidebar-item"><a class="sidebar-link" href="<?=ADMINURL . '/actions/complain/allcomplains.php'?>">All Complains</a>
+							<li class="sidebar-item"><a class="sidebar-link" href="<?=STUDENTURL . '/actions/complain/allcomplains.php'?>">All Complains</a>
 							</li>
 						</ul>
 					</li>
@@ -122,7 +84,7 @@
 							<i class="bi bi-file-ppt-fill"></i></i> <span class="align-middle">Attendance</span>
 						</a>
 						<ul id="attendance" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-							<li class="sidebar-item"><a class="sidebar-link" href="<?= ADMINURL. "/actions/attendance/allclasses.php"?>">All Attendance</a>
+							<li class="sidebar-item"><a class="sidebar-link" href="<?= STUDENTURL. "/actions/attendance/allclasses.php"?>">All Attendance</a>
 							</li>
 						</ul>
 					</li>
@@ -133,9 +95,7 @@
 							<i class="bi bi-tv"></i> <span class="align-middle">Live Class</span>
 						</a>
 						<ul id="live" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-							<li class="sidebar-item"><a class="sidebar-link" href="<?=ADMINURL . '/actions/liveclass/addliveclass.php'?>">Add Live Class</a>
-							</li>
-							<li class="sidebar-item"><a class="sidebar-link" href="<?=ADMINURL . '/actions/liveclass/liveclasses.php'?>">All Live Class</a>
+							<li class="sidebar-item"><a class="sidebar-link" href="<?=STUDENTURL . '/actions/liveclass/liveclasses.php'?>">All Live Class</a>
 							</li>
 						</ul>
 					</li>
@@ -255,7 +215,7 @@
 									<a href="#" class="list-group-item">
 										<div class="row g-0 align-items-center">
 											<div class="col-2">
-												<img src="<?=ADMINURL .'/img/avatars/avatar-5.jpg'?>"
+												<img src="<?=STUDENTURL .'/img/avatars/avatar-5.jpg'?>"
 													class="avatar img-fluid rounded-circle" alt="Vanessa Tucker">
 											</div>
 											<div class="col-10 pl-2">
@@ -322,7 +282,7 @@
 
 							<a class="nav-link dropdown-toggle   d-sm-inline-block" href="#"
 								data-toggle="dropdown">
-								<img src="<?=ADMINURL.'/img/avatars/avatar.jpg'?>" class="avatar img-fluid rounded mr-1"
+								<img src="<?=STUDENTURL.'/img/avatars/avatar.jpg'?>" class="avatar img-fluid rounded mr-1"
 									alt="Charles Hall" /> <span class="text-dark"></span>
 							</a>
 							<div class="dropdown-menu dropdown-menu-right">

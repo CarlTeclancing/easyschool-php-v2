@@ -20,7 +20,7 @@
 						<div class="col-auto ml-auto text-right mt-n1">
 							<nav aria-label="breadcrumb">
 								<ol class="breadcrumb bg-transparent p-0 mt-1 mb-0">
-									<li class="breadcrumb-item"><a href="<?=ADMINURL?>">EazySchool</a></li>
+									<li class="breadcrumb-item"><a href="<?=TEACHERURL?>">EazySchool</a></li>
 									<li class="breadcrumb-item"><a href="#">Classes</a></li>
 									<li class="breadcrumb-item active" aria-current="page">All Classes</li>
 								</ol>

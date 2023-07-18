@@ -50,12 +50,12 @@ if(isset($_POST['submit'])){
                         <input type="text" name="name" class="form-control" id="" value="<?=$row['name']?>">
                     </div>
                     <div class="form-elements">
-                        <label for="class" class="form-label mt-5">Chose Class</label>
+                        <label for="class" class="form-label mt-display 5">Chose Class</label>
                         <select name="class" id="">
                             
                             <?php 
                                 $class = $row['class_id'];
-                                $query = "SELECT * FROM classes WHERE id = $class"; 
+                                $query = "SELECT * FROM classes"; 
                                 $result = mysqli_query($conn, $query);
                             ?>
                             <?php if (mysqli_num_rows($result) > 0) : ?>
