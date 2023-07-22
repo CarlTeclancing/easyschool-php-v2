@@ -33,12 +33,25 @@
 
                                     <?php foreach($result as $data): ?>
                                         <div class="card m-5">
+                                            <?php 
+                                            $id = $data['id'];
+                                                $sql = "SELECT * FROM complain_respond WHERE complains_id = $id";
+                                                
+                                                $result = mysqli_query($conn, $sql);
+
+                                                
+                                                if(mysqli_num_rows($result) > 0){
+                                                    echo '<span class="badge bg-success">Replied</span>';
+                                                }else{
+                                                    echo '<span class="badge bg-warning">Pedning</span>';
+                                                }
+                                            ?>
                                             <div class="card-header">
                                                 <h5 class="card-title mb-0"><?=$data['title']?></h5>
                                             </div>
                                             <div class="card-body">
                                                 <p class="card-text"><?=$data['desc']?></p>
-                                                <a href="<?=ADMINURL. '/actions/complain/complain.php.php?id='. $data['id']?>" class="btn btn-primary">View Complain Details</a>
+                                                <a href="<?=ADMINURL. '/actions/complain/complain.php?id='. $data['id']?>" class="btn btn-primary">View Complain Details</a>
                                             </div>
                                         </div>
                                     <?php endforeach ?>

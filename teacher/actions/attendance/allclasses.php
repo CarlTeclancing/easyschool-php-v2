@@ -4,7 +4,7 @@
     require('../../inc/db.config.php');	
 
 
-    $query = "SELECT * FROM classes";
+    $query = "SELECT * FROM classes WHERE is_visible =1";
     
 
     $result = mysqli_query($conn, $query);
@@ -38,7 +38,8 @@
                                             </div>
                                             <div class="card-body">
                                                 <p class="card-text"><?=$data['desc']?></p>
-                                                <a href="<?=TEACHERURL. '/actions/attendance/viewclasse.php?id='. $data['id']?>" class="btn btn-primary">View Attendance</a>
+                                                <a href="<?=TEACHERURL. '/actions/attendance/viewclasse.php?id='. $data['id']?>" class="btn btn-outline-primary">View Attendance</a>
+                                                <a href="<?=TEACHERURL. '/actions/attendance/mark.php?id='. $data['id']?>" class="btn btn-primary">Mark Attendance</a>
                                             </div>
                                         </div>
                                     <?php endforeach ?>

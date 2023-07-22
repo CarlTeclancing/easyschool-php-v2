@@ -3,8 +3,9 @@
 	require('../../header.php');
     require('../../inc/db.config.php');	
 
+    $id = $_SESSION['class_id'];
 
-    $query = "SELECT * FROM classes";
+    $query = "SELECT * FROM classes WHERE id = $id";
     
 
     $result = mysqli_query($conn, $query);
@@ -19,7 +20,7 @@
 						<div class="col-auto ml-auto text-right mt-n1">
 							<nav aria-label="breadcrumb">
 								<ol class="breadcrumb bg-transparent p-0 mt-1 mb-0">
-									<li class="breadcrumb-item"><a href="<?=ADMINURL?>">EazySchool</a></li>
+									<li class="breadcrumb-item"><a href="<?=STUDENTURL?>">EazySchool</a></li>
 									<li class="breadcrumb-item"><a href="#">Users</a></li>
 									<li class="breadcrumb-item active" aria-current="page">All Users</li>
 								</ol>
@@ -38,7 +39,7 @@
                                             </div>
                                             <div class="card-body">
                                                 <p class="card-text"><?=$data['desc']?></p>
-                                                <a href="<?=ADMINURL. '/actions/attendance/viewclasse.php?id='. $data['id']?>" class="btn btn-primary">View Attendance</a>
+                                                <a href="<?=STUDENTURL. '/actions/attendance/viewclasse.php?id='. $data['id']?>" class="btn btn-primary">View Attendance</a>
                                             </div>
                                         </div>
                                     <?php endforeach ?>

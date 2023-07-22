@@ -37,7 +37,7 @@ $result = mysqli_query($conn, $sql);
 
                                         <?php
                                             $student_id = $data['student_id'];
-                                            $sql = "SELECT * FROM students WHERE id=$student_id";
+                                            $sql = "SELECT * FROM students WHERE id=$student_id && is_visible =1";
                                             $result = mysqli_query($conn, $sql);
 
                                             foreach($result as $students)
@@ -49,7 +49,7 @@ $result = mysqli_query($conn, $sql);
                                         
                                         <?php
                                             $class_id = $data['class_id'];
-                                            $sql = "SELECT * FROM classes WHERE id=$class_id";
+                                            $sql = "SELECT * FROM classes WHERE id=$class_id && is_visible = 1";
                                             $result = mysqli_query($conn, $sql);
 
                                             foreach($result as $class)
@@ -59,13 +59,13 @@ $result = mysqli_query($conn, $sql);
 
                                         <?php
                                             $teacher_id = $data['teacher_id'];
-                                            $sql = "SELECT * FROM teachers WHERE id=$teacher_id";
+                                            $sql = "SELECT * FROM teachers WHERE id=$teacher_id && is_visible=1";
                                             $result = mysqli_query($conn, $sql);
 
-                                            foreach($result as $teacher)
+                                            foreach($result as $results)
 
                                         ?>
-                                        <td class="  d-xl-table-cell"><?= $teacher['name']?></td>
+                                        <td class="  d-xl-table-cell"><?= $results['name']?></td>
 
                                         <td class="  d-xl-table-cell"><?= $data['date']?></td>
 

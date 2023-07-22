@@ -3,8 +3,9 @@
 	require('../../header.php');
     require('../../inc/db.config.php');	
 
+    $class_id = $_SESSION['class_id'];
 
-    $query = "SELECT * FROM students WHERE is_visible=1";
+    $query = "SELECT * FROM students WHERE is_visible=1 && class_id = $class_id";
 
     $result = mysqli_query($conn, $query);
 
@@ -18,7 +19,7 @@
 						<div class="col-auto ml-auto text-right mt-n1">
 							<nav aria-label="breadcrumb">
 								<ol class="breadcrumb bg-transparent p-0 mt-1 mb-0">
-									<li class="breadcrumb-item"><a href="<?=ADMINURL?>">EazySchool</a></li>
+									<li class="breadcrumb-item"><a href="<?=STUDENTURL?>">EazySchool</a></li>
 									<li class="breadcrumb-item"><a href="#">Students</a></li>
 									<li class="breadcrumb-item active" aria-current="page">All Students</li>
 								</ol>
@@ -33,7 +34,6 @@
                                     <th class="  d-xl-table-cell">Student name</th>
                                     <th class="  d-xl-table-cell">Student Email</th>
                                     <th class="  d-xl-table-cell">Student Class</th>
-                                    <th class="  d-xl-table-cell">Action</th>
                                 </tr>
 
 
@@ -53,8 +53,7 @@
 
                                         ?>
                                         <td class="  d-xl-table-cell"><?= $class['name']?></td>
-                                        <td class="  d-xl-table-cell"><a href="<?=ADMINURL.'/actions/student/edit.php?id='.$data['id']?>" class='btn btn-primary'>Edit</a></td>
-                                        <td class="  d-xl-table-cell"><a href="<?=ADMINURL.'/actions/student/hide.php?id='.$data['id']?>" class='btn btn-danger'>Suspend</a></td>
+
                                     </tr>
 
                                     <?php endforeach ?>

@@ -3,8 +3,9 @@
 	require('../../header.php');
     require('../../inc/db.config.php');	
 
+    $class_id = $_SESSION['class_id'];
 
-    $query = "SELECT * FROM courses WHERE is_visible=1";
+    $query = "SELECT * FROM courses WHERE is_visible=1 && class_id = $class_id";
 
     $result = mysqli_query($conn, $query);
 
@@ -19,7 +20,7 @@
 						<div class="col-auto ml-auto text-right mt-n1">
 							<nav aria-label="breadcrumb">
 								<ol class="breadcrumb bg-transparent p-0 mt-1 mb-0">
-									<li class="breadcrumb-item"><a href="<?=ADMINURL?>">EazySchool</a></li>
+									<li class="breadcrumb-item"><a href="<?=STUDENTURL?>">EazySchool</a></li>
 									<li class="breadcrumb-item"><a href="#">Courses</a></li>
 									<li class="breadcrumb-item active" aria-current="page">All Courses</li>
 								</ol>
@@ -34,7 +35,6 @@
                                     <th class="  d-xl-table-cell">course name</th>
                                     <th class="  d-xl-table-cell">Class</th>
                                     <th class="  d-xl-table-cell">course Description</th>
-                                    <th class="  d-xl-table-cell">Action</th>
                                 </tr>
 
 
@@ -54,10 +54,6 @@
                                         ?>
                                         <td class="  d-xl-table-cell"><?= $class['name']?></td>
                                         <td class="  d-xl-table-cell"><?= $data['desc']?></td>
-                                        <td class="  d-xl-table-cell">
-                                            <a href="<?=ADMINURL.'/actions/courses/edit.php?id='.$data['id']?>" class='btn btn-primary'>Edit</a>
-                                        </td>
-                                        <td class="  d-xl-table-cell"><a href="<?=ADMINURL.'/actions/courses/delete.php?id='.$data['id']?>" class='btn btn-danger'>Delete</a></td>
                                     </tr>
 
                                     <?php endforeach ?>

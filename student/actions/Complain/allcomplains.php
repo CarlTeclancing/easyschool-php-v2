@@ -38,7 +38,7 @@
                                             </div>
                                             <div class="card-body">
                                                 <p class="card-text"><?=$data['desc']?></p>
-                                                <a href="<?=ADMINURL. '/actions/complain/complain.php.php?id='. $data['id']?>" class="btn btn-primary">View Complain Details</a>
+                                                <a href="<?=STUDENTURL. '/actions/complain/complain.php?id='. $data['id']?>" class="btn btn-primary">View Complain Details</a>
                                             </div>
                                         </div>
                                     <?php endforeach ?>

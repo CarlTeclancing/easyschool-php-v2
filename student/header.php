@@ -73,6 +73,8 @@
 							<i class="bi bi-card-heading"></i> <span class="align-middle">Complains</span>
 						</a>
 						<ul id="complain" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="<?=STUDENTURL . '/actions/complain/addcomplain.php'?>">Add Complains</a>
+							</li>
 							<li class="sidebar-item"><a class="sidebar-link" href="<?=STUDENTURL . '/actions/complain/allcomplains.php'?>">All Complains</a>
 							</li>
 						</ul>

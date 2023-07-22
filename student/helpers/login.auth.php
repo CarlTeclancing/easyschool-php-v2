@@ -30,6 +30,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                     $_SESSION['email'] = $row['username'];
                     $_SESSION['id'] = $row['id'];
                     $_SESSION['role_id'] = $row['role_id'];
+                    $_SESSION['class_id'] = $row['class_id'];
     
                     
                     $query = http_build_query(['succes' => 'loginsucces']);

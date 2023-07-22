@@ -55,7 +55,7 @@
 
                                         ?>
                                         <td class="  d-xl-table-cell"><?= $class['name']?></td>
-                                        <td class="  d-xl-table-cell"><a href="<?= ADMINURL.'/actions/attendance/attendance.php?id=' . $data['id']?>" class='btn btn-primary'>View Attendance</a></td>
+                                        <td class="  d-xl-table-cell"><a href="<?= STUDENTURL.'/actions/attendance/attendance.php?id=' . $data['id']?>" class='btn btn-primary'>View My Attendance</a></td>
                                     </tr>
 
                                     <?php endforeach ?>

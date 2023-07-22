@@ -8,6 +8,7 @@
 
     $query = "SELECT * FROM complains WHERE id = $id";
     
+    
 
     $result = mysqli_query($conn, $query);
 
@@ -34,23 +35,24 @@
                                 <?php if(mysqli_num_rows($result) > 0): ?>
 
                                     <?php foreach($result as $data): ?>
+                                        
                                         <div class="card m-5">
                                             <div class="card-header">
-                                                <h5 class="card-title mb-0"><?=$data['title']?></h5>
+                                                <h5 class="card-title mb-0"><b>Complain Title: </b><?=$data['title']?></h5>
                                             </div>
 
                                             <div class="card-body">
                                                 <?php 
                                                         $student_id = $data['student_id'];
 
-                                                        $query = "SELECT * FROM studnets WHERE id = $student_id";
+                                                        $query = "SELECT * FROM students WHERE id = $student_id";
                                                         $result= mysqli_query($conn, $query);
                                                 ?>
 
                                                 <?php foreach($result as $student): ?>
-                                                    <p class="card-text"><?=$student['name']?></p>
+                                                    <p class="card-text"><b>Student Name: </b><?=$student['name']?></p>
                                                 <?php endforeach ?>
-                                                <p class="card-text"><?=$data['desc']?></p>
+                                                
 
                                                 <?php 
                                                         $class_id = $data['class_id'];
@@ -60,7 +62,7 @@
                                                 ?>
 
                                                 <?php foreach($result as $class): ?>
-                                                    <p class="card-text"><?=$class['name']?></p>
+                                                    <p class="card-text"><b>Class: </b><?=$class['name']?></p>
                                                 <?php endforeach ?>
 
 
@@ -72,17 +74,19 @@
                                                 ?>
 
                                                 <?php foreach($result as $teacher): ?>
-                                                    <p class="card-text"><?=$teacher['name']?></p>
+                                                    <p class="card-text"><b>Course Instructor: </b><?=$teacher['name']?></p>
                                                 <?php endforeach ?>
-                                                <p class="card-text"><?=$data['desc']?></p>
+                                                <p class="card-text"><b>Complain Description: </b><?=$data['desc']?></p>
                                                 
                                             </div>
+                                            <a href="<?=ADMINURL. '/actions/complain/reply.php?id='. $id?>" class="btn btn-primary">Reply Complain</a>
                                         </div>
+                                        <?php $complain_id = $data['id']; ?>
                                     <?php endforeach ?>
                                     
 
                                 <?php endif ?>
-
+                        
                         
                     </div>
                 </div>

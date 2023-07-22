@@ -7,7 +7,7 @@
 
     $id = $_GET['id'];
 
-    $sql = "SELECT * FROM students WHERE class_id=$id";
+    $sql = "SELECT * FROM students WHERE class_id=$id && is_visible =1";
     $result = mysqli_query($conn, $sql);
 ?>
 
@@ -48,7 +48,7 @@
                                         <td class="  d-xl-table-cell"><?= $data['email']?></td>
                                         <?php
                                             $class_id = $data['class_id'];
-                                            $sql = "SELECT * FROM classes WHERE id=$class_id";
+                                            $sql = "SELECT * FROM classes WHERE id=$class_id && is_visible =1";
                                             $result = mysqli_query($conn, $sql);
 
                                             foreach($result as $class)

@@ -25,7 +25,7 @@ $result = mysqli_query($conn, $sql);
                                 <tr>
                                     <th class="  d-xl-table-cell">Student name</th>
                                     <th class="  d-xl-table-cell">Class</th>
-                                    <th class="  d-xl-table-cell">Teacher</th>
+                                    
                                     <th class="  d-xl-table-cell">Date</th>
                                     <th class='  d-xl-table-cell'>Attendance Status</th>
                                 </tr>
@@ -37,7 +37,7 @@ $result = mysqli_query($conn, $sql);
 
                                         <?php
                                             $student_id = $data['student_id'];
-                                            $sql = "SELECT * FROM students WHERE id=$student_id";
+                                            $sql = "SELECT * FROM students WHERE id=$student_id && is_visible =1";
                                             $result = mysqli_query($conn, $sql);
 
                                             foreach($result as $students)
@@ -49,7 +49,7 @@ $result = mysqli_query($conn, $sql);
                                         
                                         <?php
                                             $class_id = $data['class_id'];
-                                            $sql = "SELECT * FROM classes WHERE id=$class_id";
+                                            $sql = "SELECT * FROM classes WHERE id=$class_id && is_visible = 1";
                                             $result = mysqli_query($conn, $sql);
 
                                             foreach($result as $class)
@@ -57,31 +57,20 @@ $result = mysqli_query($conn, $sql);
                                         ?>
                                         <td class="  d-xl-table-cell"><?= $class['name']?></td>
 
-                                        <?php
-                                            $teacher_id = $data['teacher_id'];
-                                            $sql = "SELECT * FROM teachers WHERE id=$teacher_id";
-                                            $result = mysqli_query($conn, $sql);
-
-                                            foreach($result as $teacher)
-
-                                        ?>
-                                        <td class="  d-xl-table-cell"><?= $teacher['name']?></td>
-
+                                        
                                         <td class="  d-xl-table-cell"><?= $data['date']?></td>
 
-                                        <?php if($data['status'] = 0): ?>
+                                            <?php if($data['status'] == 1): ?>
 
-                                            <td class="  d-xl-table-cell"><span>Absent</span></td>
+                                                <td class="  d-xl-table-cell"><span class="badge bg-success">Present</span></td>
+                                            <?php endif?>
 
-                                            <?php endif ?>
-
-                                            <?php if($data['status'] = 1): ?>
-
-                                                <td class="  d-xl-table-cell"><span>Present</span></td>
+                                            <?php if($data['status'] !=1): ?>
+                                                <td class="  d-xl-table-cell"><span class="badge bg-danger">Absent</span></td>
+                                            <?php endif?>
 
                                                 
-
-                                            <?php endif ?>
+                                            
 
                                         
 

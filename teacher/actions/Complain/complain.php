@@ -43,7 +43,7 @@
                                                 <?php 
                                                         $student_id = $data['student_id'];
 
-                                                        $query = "SELECT * FROM studnets WHERE id = $student_id";
+                                                        $query = "SELECT * FROM students WHERE id = $student_id";
                                                         $result= mysqli_query($conn, $query);
                                                 ?>
 
@@ -77,6 +77,7 @@
                                                 <p class="card-text"><?=$data['desc']?></p>
                                                 
                                             </div>
+                                            <a href="<?=TEACHERURL. '/actions/complain/reply.php?id='. $id?>" class="btn btn-primary">Reply Complain</a>
                                         </div>
                                     <?php endforeach ?>
                                     

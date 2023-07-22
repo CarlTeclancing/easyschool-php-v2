@@ -99,8 +99,11 @@
 							<i class="bi bi-file-ppt-fill"></i></i> <span class="align-middle">Attendance</span>
 						</a>
 						<ul id="attendance" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+						<li class="sidebar-item"><a class="sidebar-link" href="<?= TEACHERURL. "/actions/attendance/mark.php"?>">Mark Attendance</a>
+							</li>
 							<li class="sidebar-item"><a class="sidebar-link" href="<?= TEACHERURL. "/actions/attendance/allclasses.php"?>">All Attendance</a>
 							</li>
+
 						</ul>
 					</li>
 
