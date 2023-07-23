@@ -5,6 +5,7 @@ session_start();
 
 require('../inc/db.config.php');
 require('../inc/functions.php');
+require('../../path.php');
 //require('../inc/dir.php');
 
 
@@ -33,11 +34,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                     $_SESSION['class_id'] = $row['class_id'];
     
                     
+                    
                     $query = http_build_query(['succes' => 'loginsucces']);
-                    header('Location: http://localhost/easyschool/student/?' .$query);
+                    header('Location:'. STUDENTURL.'?' .$query);
                   }else{
                     $query = http_build_query(['error' => 'loginerror']);
-                     header('Location: http://localhost/easyschool/student.php?' . $query);
+                     header('Location:' .BASEURL .'/student.php?' . $query);
                   }
 
 

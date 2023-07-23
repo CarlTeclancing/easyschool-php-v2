@@ -5,6 +5,7 @@ session_start();
 
 require('../inc/db.config.php');
 require('../inc/functions.php');
+require('../../path.php');
 //require('../inc/dir.php');
 
 
@@ -17,7 +18,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     
         verify_input($password, 'password_error');
 
-        $sql = ("SELECT * FROM admins");
+        $sql = ("SELECT * FROM teachers");
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
@@ -32,11 +33,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                     $_SESSION['role_id'] = $row['role_id'];
     
                     
+                    
                     $query = http_build_query(['succes' => 'loginsucces']);
-                    header('Location: http://localhost/easyschool/admin-dashboard/?' .$query);
+                    header('Location:'. TEACHERURL.'?' .$query);
                   }else{
                     $query = http_build_query(['error' => 'loginerror']);
-                     header('Location: http://localhost/easyschool/login.php?' . $query);
+                     header('Location:' .BASEURL .'/login.php?' . $query);
                   }
 
 
